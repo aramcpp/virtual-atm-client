@@ -36,7 +36,7 @@ public class CustomerConsole {
                 pin = console.nextLine();
                 LOGGER.info("PIN is entered");
                 //pin = String.valueOf(pinReader.readPassword("Please enter your PIN: "));
-                if (!pin.matches("^[0-9]+$") || pin.length() > 6 ) {
+                if (!pin.matches("^[0-9]+$") || pin.length() > 6 || pin.length() < 4) {
                     throw new IncorrectPinException("Failed to read the PIN.");
                 }
                 break;
